@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/grid.css">
+        <link rel="stylesheet" href="./css/styles.css">
+
+        <title>Profiles</title>
+    </head>
+    <body style="cursor: auto;">
+        <div class="container">
+            <div class="width-12">
+                <h1>Profiles</h1>
+            </div>
+            <div class="width-8">
+                <table id="table-profiles">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Category</th>
+                            <th>Experience</th>
+                            <th>Languages</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-id="1">
+                            <td>Ms. Marilie Ferry</td>
+                            <td>26</td>
+                            <td>Movies</td>
+                            <td>Novice</td>
+                            <td>English, Irish</td>
+                        </tr>
+                        <tr data-id="2">
+                            <td>Mrs. Lois Lehner</td>
+                            <td>32</td>
+                            <td>Sport</td>
+                            <td>Competent</td>
+                            <td>English,Spanish</td>
+                        </tr>
+                        <tr data-id="3">
+                            <td>Jamel Bayer</td>
+                            <td>73</td>
+                            <td>Movies</td>
+                            <td>Competent</td>
+                            <td>English,Irish</td>
+                        </tr>
+                        <tr data-id="4">
+                            <td>Lucius Rempel</td>
+                            <td>81</td>
+                            <td>Sport</td>
+                            <td>Expert</td>
+                            <td>Irish,Spanish</td>
+                        </tr>
+                        <tr data-id="5">
+                            <td>Micaela Aufderhar V</td>
+                            <td>96</td>
+                            <td>Music</td>
+                            <td>Novice</td>
+                            <td>English</td>
+                        </tr>
+                        <tr data-id="6">
+                            <td>Dallin Jaskolski</td>
+                            <td>79</td>
+                            <td>Movies</td>
+                            <td>Expert</td>
+                            <td>Irish</td>
+                        </tr>
+                        <tr data-id="7">
+                            <td>Marcelina Rogahn</td>
+                            <td>33</td>
+                            <td>Music</td>
+                            <td>Competent</td>
+                            <td>English,Irish</td>
+                        </tr>
+                        <tr data-id="8">
+                            <td>Christopher Runolfsson I</td>
+                            <td>41</td>
+                            <td>Movies</td>
+                            <td>Competent</td>
+                            <td>English,Irish</td>
+                        </tr>
+                        <tr data-id="9">
+                            <td>Duncan Lueilwitz</td>
+                            <td>68</td>
+                            <td>Music</td>
+                            <td>Novice</td>
+                            <td>English,Spanish</td>
+                        </tr>
+                        <tr data-id="10">
+                            <td>Viva Tromp</td>
+                            <td>43</td>
+                            <td>Music</td>
+                            <td>Expert</td>
+                            <td>English,Irish</td>
+                        </tr>
+                        <tr data-id="11">
+                            <td>Elmo Kulas</td>
+                            <td>79</td>
+                            <td>Sport</td>
+                            <td>Expert</td>
+                            <td>English,Irish</td>
+                        </tr>
+                        <tr data-id="12">
+                            <td>Morton Cummerata</td>
+                            <td>84</td>
+                            <td>Music</td>
+                            <td>Novice</td>
+                            <td>Spanish</td>
+                        </tr>
+                        <tr data-id="13">
+                            <td>Meagan Kohler</td>
+                            <td>82</td>
+                            <td>Music</td>
+                            <td>Expert</td>
+                            <td>English,Spanish</td>
+                        </tr>
+                        <tr data-id="14">
+                            <td>Prof. Myah Feest Jr.</td>
+                            <td>91</td>
+                            <td>Sport</td>
+                            <td>Competent</td>
+                            <td>Irish</td>
+                        </tr>
+                        <tr data-id="15">
+                            <td>Brandyn Zieme</td>
+                            <td>51</td>
+                            <td>Sport</td>
+                            <td>Expert</td>
+                            <td>English,Irish</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="width-4">
+                <h2>Add Profile</h2>
+                <form id="form-profile">
+                    <div class="form-group">
+                        <label class="form-label">Name: </label>
+                        <input type="text" name="name" id="name" class="form-input" value="">
+                        <div class="error" id="error-name"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Age: </label>
+                        <input type="text" name="age" id="age" class="form-input" value="">
+                        <div class="error" id="error-age"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Category: </label>
+                        <select name="category" id="category" class="form-select">
+                            <option value="">Please choose...</option>
+                            <option value="1">Sport</option>
+                            <option value="2">Music</option>
+                            <option value="3">Movie</option>
+                        </select>
+                        <div class="error" id="error-category"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Experience:</label>
+                        <div class="radio-group">
+                            <div>
+                                <input type="radio" name="experience" id="experience-novice" value="Novice">
+                                <label for="experience-novice">Novice</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="experience" id="experience-competent" value="Competent">
+                                <label for="experience-competent">Competent</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="experience" id="experience-expert" value="Expert">
+                                <label for="experience-expert">Expert</label>
+                            </div>
+                        </div>
+                        <div class="error" id="error-experience"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Languages:</label>
+                        <div class="radio-group">
+                            <div>
+                                <input type="checkbox" name="languages[]" id="language-english" value="English">
+                                <label for="language-english">English</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="languages[]" id="language-irish" value="Irish">
+                                <label for="language-irish">Irish</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="languages[]" id="language-spanish" value="Spanish">
+                                <label for="language-spanish">Spanish</label>
+                            </div>
+                        </div>
+                        <div class="error" id="error-languages"></div>
+                    </div>
+
+                    <button type="submit" id="btn-submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+    <script src="js/app.js"></script>
+</html>

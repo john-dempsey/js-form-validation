@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/grid.css">
+        <link rel="stylesheet" href="./css/styles.css">
+
+        <title>Credit Cards</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="width-12">
+                <h1>Credit Cards</h1>
+            </div>
+            <div class="width-8">
+                <table id="table-credit-cards">
+                    <thead>
+                        <tr>
+                            <th>Card Name</th>
+                            <th>Card Type</th>
+                            <th>Card Number</th>
+                            <th>Expiry Date</th>
+                            <th>CVV</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-id="1">
+                            <td>Josef Bloggs</td>
+                            <td>1234567890123456</td>
+                            <td>visa</td>
+                            <td>2/2026</td>
+                            <td>123</td>
+                        </tr>
+                        <tr data-id="2">
+                            <td>Jirou Bloggs</td>
+                            <td>2345678901234567</td>
+                            <td>mcrd</td>
+                            <td>3/2027</td>
+                            <td>234</td>
+                        </tr>
+                        <tr data-id="3">
+                            <td>Jamie Bloggs</td>
+                            <td>3456789012345678</td>
+                            <td>amex</td>
+                            <td>4/2028</td>
+                            <td>345</td>
+                        </tr>
+                        <tr data-id="4">
+                            <td>Jamal Bloggs</td>
+                            <td>4567890123456789</td>
+                            <td>disc</td>
+                            <td>5/2029</td>
+                            <td>456</td>
+                        </tr>
+                        <tr data-id="5">
+                            <td>Jeong Bloggs</td>
+                            <td>5678901234567890</td>
+                            <td>visa</td>
+                            <td>6/2026</td>
+                            <td>567</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="width-4">
+                <h2>Add Credit Card</h2>
+                <form id="form-credit-card">
+                    <div class="form-group">
+                        <label class="form-label">Card Type:</label>
+                        <div class="radio-group">
+                            <div>
+                                <input type="radio" name="issuer" id="issuer-visa" value="visa">
+                                <label for="issuer-visa">Visa</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="issuer" id="issuer-mcrd" value="mcrd">
+                                <label for="issuer-mcrd">Mastercard</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="issuer" id="issuer-amex" value="amex">
+                                <label for="issuer-amex">American Express</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="issuer" id="issuer-disc" value="disc">
+                                <label for="issuer-disc">Discover</label>
+                            </div>
+                        </div>
+                        <div class="error" id="error-issuer"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Name: </label>
+                        <input type="text" name="name" id="name" class="form-input" value="">
+                        <div class="error" id="error-name"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Card Number: </label>
+                        <input type="text" name="number" id="number" class="form-input" value="">
+                        <div class="error" id="error-number"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Expiry Month: </label>
+                        <select name="month" id="month" class="form-select">
+                            <option value="">Please choose...</option>"
+                            <option value="1">Jan</option>
+                            <option value="2">Feb</option>
+                            <option value="3">Mar</option>
+                            <option value="4">Apr</option>
+                            <option value="5">May</option>
+                            <option value="6">Jun</option>
+                            <option value="7">Jul</option>
+                            <option value="8">Aug</option>
+                            <option value="9">Sep</option>
+                            <option value="10">Oct</option>
+                            <option value="11">Nov</option>
+                            <option value="12">Dec</option>
+                        </select>
+                        <div class="error" id="error-month"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Expiry Year: </label>
+                        <select name="year" id="year" class="form-select">
+                            <option value="">Please choose...</option>"
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                        </select>
+                        <div class="error" id="error-year"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">CVV: </label>
+                        <input type="text" name="cvv" id="cvv" class="form-input" value="">
+                        <div class="error" id="error-cvv"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="save">Save card details: </label>
+                        <input type="checkbox" name="save" value="Yes" id="save">Yes
+                        <div class="error" id="error-save"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="accept">Accept terms and conditions: </label>
+                        <input type="checkbox" name="accept" value="Yes" id="accept">Yes
+                        <div class="error" id="error-accept"></div>
+                    </div>
+                    <button type="submit" id="btn-submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

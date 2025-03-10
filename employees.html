@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/grid.css">
+        <link rel="stylesheet" href="./css/styles.css">
+
+        <title>Employees</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="width-12">
+                <h1>Employees</h1>
+            </div>
+            <div class="width-8">
+                <table id="table-employees">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>PPSN</th>
+                            <th>Salary</th>
+                            <th>Department</th>
+                            <th>Projects</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-id="1">
+                            <td>Lorna Fritsch</td>
+                            <td>4301048EX</td>
+                            <td>76591.99</td>
+                            <td>Toys</td>
+                            <td><ul class="form-list"><li>Diverse high-level hardware</li><li>Streamlined intangible collaboration</li></ul></td>
+                        </tr>
+                        <tr data-id="2">
+                            <td>Sunny McLaughlin DDS</td>
+                            <td>5543516NF</td>
+                            <td>38553.26</td>
+                            <td>Outdoors &amp; Shoes</td>
+                            <td><ul class="form-list"><li>Customer-focused contextually-based contingency</li><li>Customizable scalable migration</li></ul></td>
+                        </tr>
+                        <tr data-id="3">
+                            <td>Joaquin Schroeder IV</td>
+                            <td>4824936PG</td>
+                            <td>98909.33</td>
+                            <td>Outdoors &amp; Shoes</td>
+                            <td><ul class="form-list"><li>Diverse high-level hardware</li><li>Versatile dynamic complexity</li><li>User-centric bandwidth-monitored localareanetwork</li><li>Polarised even-keeled model</li><li>Reduced fresh-thinking knowledgeuser</li></ul></td>
+                        </tr>
+                        <tr data-id="4">
+                            <td>Lilian Kessler</td>
+                            <td>8618242O</td>
+                            <td>97991.95</td>
+                            <td>Outdoors &amp; Shoes</td>
+                            <td><ul class="form-list"><li>Customer-focused contextually-based contingency</li></ul></td>
+                        </tr>
+                        <tr data-id="5">
+                            <td>Arnoldo Price PhD</td>
+                            <td>1759248K</td>
+                            <td>44286.75</td>
+                            <td>Outdoors &amp; Shoes</td>
+                            <td><ul class="form-list"><li>Customer-focused contextually-based contingency</li><li>Expanded high-level approach</li><li>Customizable scalable migration</li></ul></td>
+                        </tr>
+                        <tr data-id="6">
+                            <td>Serena Waelchi</td>
+                            <td>2190308FN</td>
+                            <td>68474.24</td>
+                            <td>Garden &amp; Shoes</td>
+                            <td><ul class="form-list"><li>User-centric bandwidth-monitored localareanetwork</li></ul></td>
+                        </tr>
+                        <tr data-id="7">
+                            <td>Dr. Johan Friesen PhD</td>
+                            <td>7190283L</td>
+                            <td>41622.85</td>
+                            <td>Toys</td>
+                            <td><ul class="form-list"><li>Streamlined intangible collaboration</li></ul></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="width-4">
+                <h2>Add Employee</h2>
+                <form id="form-employee">
+                    <div class="form-group">
+                        <label class="form-label">Name: </label>
+                        <input type="text" name="name" id="name" class="form-input" value="">
+                        <div class="error" id="error-name"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">PPSN: </label>
+                        <textarea name="ppsn" id="ppsn" class="form-textarea"></textarea>
+                        <div class="error" id="error-ppsn"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Salary: </label>
+                        <input type="text" name="salary" id="salary" class="form-input" value="">
+                        <div class="error" id="error-salary"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Department: </label>
+                        <select name="department_id" id="department_id" class="form-select">
+                            <option value="">Please choose...</option>
+                            <option value="1">Outdoors &amp; Shoes</option>
+                            <option value="2">Toys</option>
+                            <option value="3">Garden &amp; Shoes</option>
+                        </select>
+                        <div class="error" id="error-department_id"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Projects: </label>
+                        <select name="project_id[]" id="project_id" class="form-select" multiple="" size="7">
+                            <option value="1">Exclusive interactive opensystem</option>
+                            <option value="2">Customer-focused contextually-based contingency</option>
+                            <option value="3">Diverse high-level hardware</option>
+                            <option value="4">Expanded high-level approach</option>
+                            <option value="5">Versatile dynamic complexity</option>
+                            <option value="6">Streamlined intangible collaboration</option>
+                            <option value="7">User-centric bandwidth-monitored localareanetwork</option>
+                            <option value="8">Proactive global systemengine</option>
+                            <option value="9">Polarised even-keeled model</option>
+                            <option value="10">Customizable scalable migration</option>
+                            <option value="11">Organic multimedia hardware</option>
+                            <option value="12">Reduced fresh-thinking knowledgeuser</option>
+                        </select>
+                        <div class="error" id="error-project_id"></div>
+                    </div>
+
+                    <button type="submit" id="btn-submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

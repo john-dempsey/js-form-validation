@@ -1,0 +1,60 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+.form-delete {
+    display: inline;
+}
+.error { 
+    color: red; 
+    margin-left: 120px;
+}
+.alert {
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+}
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+.form-label {
+    display: inline-block;
+    width: 30%;
+}
+.form-control {
+    display: block;
+    width: 100%;
+}
+.radio-group, select[multiple], .form-textarea {
+    display: inline-block;
+    vertical-align: text-top;
+}
+.form-input, .form-select, .form-textarea {
+    display: inline-block;
+    width: 65%;
+}
+.form-list li {
+    list-style-type: circle;
+    margin-left: 20px;
+}

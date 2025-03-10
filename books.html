@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/grid.css">
+        <link rel="stylesheet" href="./css/styles.css">
+
+        <title>Books</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="width-12">
+                <h1>Books</h1>
+            </div>
+            <div class="width-8">
+                <table id="table-books">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Authors</th>
+                            <th>ISBN</th>
+                            <th>Price</th>
+                            <th>Publisher</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-id="1">
+                            <td>Fantastic Steel Hat</td>
+                            <td><ul class="form-list"><li>Clifton Torphy</li></ul></td>
+                            <td>9788177662252</td>
+                            <td>13.00</td>
+                            <td>Shanahan, Schoen and Collier</td>
+                        </tr>
+                        <tr data-id="2">
+                            <td>Gorgeous Wool Hat</td>
+                            <td><ul class="form-list"><li>Archibald Koepp</li></ul></td>
+                            <td>9791407560204</td>
+                            <td>61.49</td>
+                            <td>Littel, Nolan and Mueller</td>
+                        </tr>
+                        <tr data-id="3">
+                            <td>Small Linen Computer</td>
+                            <td><ul class="form-list"><li>Miss Brooklyn Hill</li></ul></td>
+                            <td>9788425136580</td>
+                            <td>60.84</td>
+                            <td>Shanahan, Schoen and Collier</td>
+                        </tr>
+                        <tr data-id="4">
+                            <td>Ergonomic Paper Watch</td>
+                            <td><ul class="form-list"><li>Miss Brooklyn Hill</li></ul></td>
+                            <td>9783563197998</td>
+                            <td>68.49</td>
+                            <td>Littel, Nolan and Mueller</td>
+                        </tr>
+                        <tr data-id="5">
+                            <td>Lightweight Marble Hat</td>
+                            <td><ul class="form-list"><li>Archibald Koepp</li><li>Clifton Torphy</li><li>Merl Volkman</li></ul></td>
+                            <td>9799439133014</td>
+                            <td>45.49</td>
+                            <td>Littel, Nolan and Mueller</td>
+                        </tr>
+                        <tr data-id="6">
+                            <td>Lightweight Steel Table</td>
+                            <td><ul class="form-list"><li>Mr. Adam Powlowski</li></ul></td>
+                            <td>9798597880006</td>
+                            <td>72.76</td>
+                            <td>Shanahan, Schoen and Collier</td>
+                        </tr>
+                        <tr data-id="7">
+                            <td>Small Granite Lamp</td>
+                            <td><ul class="form-list"><li>Price Hills</li></ul></td>
+                            <td>9796827751232</td>
+                            <td>32.26</td>
+                            <td>Littel, Nolan and Mueller</td>
+                        </tr>
+                        <tr data-id="8">
+                            <td>Rustic Paper Keyboard</td>
+                            <td><ul class="form-list"><li>Clifton Torphy</li><li>Merl Volkman</li></ul></td>
+                            <td>9792044687132</td>
+                            <td>77.04</td>
+                            <td>Littel, Nolan and Mueller</td>
+                        </tr>
+                        <tr data-id="9">
+                            <td>Heavy Duty Aluminum Wallet</td>
+                            <td><ul class="form-list"><li>Archibald Koepp</li></ul></td>
+                            <td>9796369641169</td>
+                            <td>39.67</td>
+                            <td>Davis, Altenwerth and Will</td>
+                        </tr>
+                        <tr data-id="10">
+                            <td>Rustic Paper Shirt</td>
+                            <td><ul class="form-list"><li>Dr. Maritza Douglas</li><li>Bryana Parisian PhD</li></ul></td>
+                            <td>9782090059717</td>
+                            <td>29.76</td>
+                            <td>Davis, Altenwerth and Will</td>
+                        </tr>
+                        <tr data-id="11">
+                            <td>Lightweight Wooden Plate</td>
+                            <td><ul class="form-list"><li>Clifton Torphy</li></ul></td>
+                            <td>9790827750592</td>
+                            <td>35.03</td>
+                            <td>Littel, Nolan and Mueller</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="width-4">
+                <h2>Add Book</h2>
+                <form id="form-book">
+                    <div class="form-group">
+                        <label class="form-label">Title: </label>
+                        <input type="text" name="title" id="title" class="form-input" value="">
+                        <div class="error" id="error-title"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Authors: </label>
+                        <select name="author_id[]" id="author_id" class="form-select" multiple="" size="7">
+                            <option value="1">Dr. Maritza Douglas</option>
+                            <option value="2">Mr. Adam Powlowski</option>
+                            <option value="3">Archibald Koepp</option>
+                            <option value="4">Price Hills</option>
+                            <option value="5">Junior Roberts</option>
+                            <option value="6">Bryana Parisian PhD</option>
+                            <option value="7">Mr. Connor Mraz</option>
+                            <option value="8">Miss Brooklyn Hill</option>
+                            <option value="9">Prof. Amelia Willms III</option>
+                            <option value="10">Clifton Torphy</option>
+                            <option value="11">Aryanna Lang</option>
+                            <option value="12">Merl Volkman</option>
+                        </select>
+                        <div class="error" id="error-author_id"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">ISBN: </label>
+                        <input type="text" name="isbn" id="isbn" class="form-input" value="">
+                        <div class="error" id="error-isbn"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Price: </label>
+                        <input type="text" name="price" id="price" class="form-input" value="">
+                        <div class="error" id="error-price"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Publisher: </label>
+                        <select name="publisher_id" id="publisher_id" class="form-select">
+                            <option value="">Please choose...</option>
+                            <option value="1">Davis, Altenwerth and Will</option>
+                            <option value="2">Littel, Nolan and Mueller</option>
+                            <option value="3">Shanahan, Schoen and Collier</option>
+                        </select>
+                        <div class="error" id="error-publisher_id"></div>
+                    </div>
+
+                    <button type="submit" id="btn-submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

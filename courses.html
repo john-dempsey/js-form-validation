@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/grid.css">
+        <link rel="stylesheet" href="./css/styles.css">
+
+        <title>Courses</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="width-12">
+                <h1>Courses</h1>
+            </div>
+            <div class="width-8">
+                <table id="table-courses">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Code</th>
+                            <th>Department</th>
+                            <th>Modules</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-id="1">
+                            <td>Art History</td>
+                            <td>Dicta maiores in...</td>
+                            <td>ART-4032</td>
+                            <td>Arts Department</td>
+                            <td><ul class="form-list"><li>Mediocre Marble Shirt</li><li>Gorgeous Paper Car</li><li>Small Cotton Computer</li><li>Gorgeous Concrete Knife</li></ul></td>
+                        </tr>
+                        <tr data-id="2">
+                            <td>Fine Art</td>
+                            <td>Ad exercitationem et...</td>
+                            <td>ART-4764</td>
+                            <td>Arts Department</td>
+                            <td><ul class="form-list"><li>Durable Copper Lamp</li><li>Incredible Iron Bench</li><li>Heavy Duty Silk Car</li><li>Intelligent Marble Clock</li><li>Aerodynamic Wooden Hat</li><li>Fantastic Granite Chair</li></ul></td>
+                        </tr>
+                        <tr data-id="3">
+                            <td>Music</td>
+                            <td>Fugit adipisci unde...</td>
+                            <td>ART-8123</td>
+                            <td>Arts Department</td>
+                            <td><ul class="form-list"><li>Heavy Duty Wool Gloves</li><li>Small Cotton Computer</li><li>Gorgeous Silk Shoes</li><li>Incredible Concrete Plate</li><li>Enormous Granite Hat</li></ul></td>
+                        </tr>
+                        <tr data-id="4">
+                            <td>Drama</td>
+                            <td>Est autem ipsum...</td>
+                            <td>ART-1438</td>
+                            <td>Arts Department</td>
+                            <td><ul class="form-list"><li>Durable Leather Coat</li><li>Fantastic Paper Watch</li><li>Awesome Bronze Bench</li><li>Ergonomic Marble Shirt</li></ul></td>
+                        </tr>
+                        <tr data-id="5">
+                            <td>Accounting</td>
+                            <td>Sit ut odio...</td>
+                            <td>BUS-8771</td>
+                            <td>Business Department</td>
+                            <td><ul class="form-list"><li>Mediocre Marble Shirt</li><li>Synergistic Linen Bench</li><li>Gorgeous Silk Shoes</li><li>Fantastic Leather Shirt</li></ul></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="width-4">
+                <h2>Add Course</h2>
+                <form id="form-course">
+                    <div class="form-group">
+                        <label class="form-label">Title: </label>
+                        <input type="text" name="title" id="title" class="form-input" value="">
+                        <div class="error" id="error-title"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Description: </label>
+                        <textarea name="description" id="description" class="form-textarea"></textarea>
+                        <div class="error" id="error-description"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Code: </label>
+                        <input type="text" name="code" id="code" class="form-input" value="">
+                        <div class="error" id="error-code"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Department: </label>
+                        <select name="department_id" id="department_id" class="form-select">
+                            <option value="">Please choose...</option>
+                            <option value="1">Arts Department</option>
+                            <option value="2">Business Department</option>
+                            <option value="3">Science Department</option>
+                        </select>
+                        <div class="error" id="error-department_id"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Modules: </label>
+                        <select name="module_id[]" id="module_id" class="form-select" multiple="" size="7">
+                            <option value="1">Mediocre Marble Shirt</option>
+                            <option value="2">Incredible Aluminum Table</option>
+                            <option value="3">Gorgeous Paper Car</option>
+                            <option value="4">Fantastic Leather Shoes</option>
+                            <option value="5">Rustic Bronze Shirt</option>
+                            <option value="6">Aerodynamic Marble Lamp</option>
+                            <option value="7">Synergistic Linen Bench</option>
+                            <option value="8">Durable Copper Lamp</option>
+                            <option value="9">Heavy Duty Wool Gloves</option>
+                            <option value="10">Durable Leather Coat</option>
+                            <option value="11">Small Cotton Computer</option>
+                            <option value="12">Ergonomic Rubber Shirt</option>
+                            <option value="13">Heavy Duty Linen Knife</option>
+                            <option value="14">Fantastic Paper Watch</option>
+                            <option value="15">Gorgeous Silk Shoes</option>
+                            <option value="16">Awesome Bronze Bench</option>
+                            <option value="17">Practical Steel Watch</option>
+                            <option value="18">Incredible Iron Bench</option>
+                            <option value="19">Ergonomic Marble Shirt</option>
+                            <option value="20">Durable Cotton Shirt</option>
+                            <option value="21">Incredible Concrete Plate</option>
+                            <option value="22">Heavy Duty Silk Car</option>
+                            <option value="23">Rustic Steel Gloves</option>
+                            <option value="24">Intelligent Marble Clock</option>
+                            <option value="25">Gorgeous Concrete Knife</option>
+                            <option value="26">Ergonomic Marble Knife</option>
+                            <option value="27">Aerodynamic Wooden Hat</option>
+                            <option value="28">Fantastic Leather Shirt</option>
+                            <option value="29">Fantastic Granite Chair</option>
+                            <option value="30">Enormous Granite Hat</option>
+                        </select>
+                        <div class="error" id="error-module_id"></div>
+                    </div>
+
+                    <button type="submit" id="btn-submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
