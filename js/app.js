@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function clearFormErrors() {
-        let form = document.querySelector('#form-profile');
+        // let form = document.querySelector('#form-profile');
         let divs = form.querySelectorAll('.error');
 
         divs.forEach(function(div) {
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function showFormErrors(errors) {
-        let form = document.querySelector('#form-profile');
+        // let form = document.querySelector('#form-profile');
 
         for (let key in errors) {
             let error = errors[key];

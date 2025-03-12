@@ -13,28 +13,20 @@ document.addEventListener("DOMContentLoaded", function (event) {
         let data = getFormData(form);
         let errors = validateFormData(data);
         let numErrors = Object.keys(errors).length;
-        console.log(data);
         if (numErrors === 0) {
-            // form.submit();
-            const url = "card_store.php";
             try {
-                const response = await fetch(url, {
-                    method: "POST",
-                    body: JSON.stringify(data)
-                });
-                if (!response.ok) {
-                    console.log(`Response status: ${response.status}`);
+                let response = await storeCard(data);
+                if (response.status == true) {
+                    insertRow(data);
+                    form.reset();
                 }
                 else {
-                    const json = await response.json();
-                    console.log(json);
-                    if (json.status === true) {
-                        insertRow(data);
-                        form.reset();
-                    }
+                    throw new Exception("Error storing card");
                 }
-            } catch (error) {
-                console.error(error.message);
+            }
+            catch (e) {
+                console.log(e.getMessage());
+                alert("Error storing card");
             }
         }
         else {
@@ -155,5 +147,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
             }
             cell.innerHTML = text;
         }
+    }
+
+    async function storeCard(data) {
+        const url = "card_store.php";
+        const response = await fetch(url, {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+                "Content-Type": "application/json",
+            }
+        });
+        if (!response.ok) {
+            throw new Exception(`Response status: ${response.status}`);
+        }
+        const json = await response.json();
+        return json;
     }
 });
