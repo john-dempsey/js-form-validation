@@ -13,6 +13,17 @@ document.addEventListener('DOMContentLoaded', function() {
     let form = document.querySelector('#form-profile');
     let btn = form.querySelector('#btn-submit');
     let categories = form.querySelectorAll('select#category option');
+
+    // let categories2 = [];
+    // for (let i = 0; i != categories.length; i++) {
+    //     let object = {
+    //         value: categories[i].value,
+    //         text: categories[i].textContent
+    //     };
+    //     categories2.push(object);
+    // }
+    // categories = categories2;
+
     categories = Array.from(categories).map(function(category) {
         return {
             value: category.value,
