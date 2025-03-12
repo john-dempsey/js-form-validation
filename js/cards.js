@@ -2,16 +2,53 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     let btn = document.querySelector("#btn-submit");
     let form = document.querySelector('#form-credit-card');
+    let table = document.querySelector("#table-credit-cards");
+    let tbody = table.querySelector("tbody");
     let validMonths = getOptions("#month");
     let validYears = getOptions("#year");
 
-    btn.addEventListener("click", function (event) {
+    btn.addEventListener("click", async function (event) {
         event.preventDefault();
+        clearErrors();
         let data = getFormData(form);
         let errors = validateFormData(data);
+        let numErrors = Object.keys(errors).length;
         console.log(data);
-        console.log(errors);
+        if (numErrors === 0) {
+            // form.submit();
+            const url = "card_store.php";
+            try {
+                const response = await fetch(url, {
+                    method: "POST",
+                    body: JSON.stringify(data)
+                });
+                if (!response.ok) {
+                    console.log(`Response status: ${response.status}`);
+                }
+                else {
+                    const json = await response.json();
+                    console.log(json);
+                    if (json.status === true) {
+                        insertRow(data);
+                        form.reset();
+                    }
+                }
+            } catch (error) {
+                console.error(error.message);
+            }
+        }
+        else {
+            showErrors(errors);
+        }
     });
+
+    function clearErrors() {
+        let divs = form.querySelectorAll(".error");
+        for (let i = 0; i != divs.length; i++) {
+            let div = divs[i];
+            div.innerHTML = "";
+        }
+    }
 
     function getFormData(form) {
         let data = new FormData(form);
@@ -93,5 +130,30 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
 
         return errors;
+    }
+
+    function showErrors(errors) {
+        for (const field in errors) {
+            let error = errors[field];
+            let id = "#error-" + field;
+            let div = form.querySelector(id);
+            div.innerHTML = error;
+        }
+    }
+
+    function insertRow(data) {
+        let row = tbody.insertRow();
+        for (let i = 0; i != 5; i++) {
+            let cell = row.insertCell();
+            let text = null;
+            switch (i) {
+                case 0: text = data.name; break;
+                case 1: text = data.number; break;
+                case 2: text = data.issuer; break;
+                case 3: text = data.month + "/" + data.year; break;
+                case 4: text = data.cvv; break;
+            }
+            cell.innerHTML = text;
+        }
     }
 });
